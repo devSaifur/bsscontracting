@@ -76,8 +76,8 @@ importers:
         specifier: ^0.5.9
         version: 0.5.9(tailwindcss@3.4.16)
       astro-vtbot:
-        specifier: ^1.10.7
-        version: 1.10.7
+        specifier: ^2.0.3
+        version: 2.0.3
       prettier:
         specifier: ^3.4.2
         version: 3.4.2
@@ -912,17 +912,17 @@ packages:
   '@vscode/l10n@0.0.18':
     resolution: {integrity: sha512-KYSIHVmslkaCDyw013pphY+d7x1qV8IZupYfeIfzNA+nsaWHbn5uPuQRvdRFsa9zFzGeudPuoGoZ1Op4jrJXIQ==}
 
-  '@vtbag/cam-shaft@1.0.1':
-    resolution: {integrity: sha512-9lSaxaT4sLX6mvcf4ixGgvT3EuUQAVCF7oSZcoj0tLRBdDM0W7ABZwvjqT37zX2omWaqDWavddmVuK6hu1DZnQ==}
+  '@vtbag/cam-shaft@1.0.5':
+    resolution: {integrity: sha512-fQIS4v8KmZ8t2FzfijAroX5i4s4KC1bgNoTZlrusBwXU5jaU6CxG6iFPgkPYRXre6tKzI0/aQTjPt03dyCY0ew==}
 
-  '@vtbag/element-crossing@1.0.4':
-    resolution: {integrity: sha512-/V46j1Rl41t1dzILKauxF+fifjYEtUSCq2VfZQeUO5UQ5c8ENWJ1b3XSt3c7yKk36VKl5KnFo75xfiyXFZ8weA==}
+  '@vtbag/element-crossing@1.1.0':
+    resolution: {integrity: sha512-1YL609KPwhHUKRrVNfoogQCVJPfFrE5DubOLcCJZLHVCjWZ2ZAPcaq1wR2OP6nXD0Ok9JLX41YsEtYBYzw6CxQ==}
 
-  '@vtbag/inspection-chamber@1.0.18':
-    resolution: {integrity: sha512-QAK+4y7xDUiBhEsvZQD4yPQaWMYaHUrhXbB8Ba2y7++31CX8+9UE7RIuGIlSNzG6QVBZijVVKxzYXld/h6jvpQ==}
+  '@vtbag/inspection-chamber@1.0.19':
+    resolution: {integrity: sha512-W2YQO+5inuc6YUvQ62clhBj2W+hl1zonrXMPnpnbggW9wQ0wq0nCc+C7mZ6e46z83Yv/2+M7JxVkBS5y7AoQkg==}
 
-  '@vtbag/turn-signal@1.1.0':
-    resolution: {integrity: sha512-2WoBbs3v7hWxu6BXvWab4G8MJIFr21vEcJ5Y4mhXlYifVzHLSf5M+aHxEEk62DMOeVmjHwqt8DK47GYnFrEqmg==}
+  '@vtbag/turn-signal@1.3.0':
+    resolution: {integrity: sha512-2Dj5sHjCrdDclGInN8K2pGCwlWmhT53jIqKL7sJLOFYKJlDSTz+LcC/JJFYNDPr7US001Aum51QtCcz1FXbvHw==}
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -991,8 +991,8 @@ packages:
     peerDependencies:
       astro: ^4.0.0-beta || ^5.0.0-beta || ^3.3.0
 
-  astro-vtbot@1.10.7:
-    resolution: {integrity: sha512-lwCMq+ruuTbHooJ/ZYL2tA99KXDXqbmD5JNBtlnuO7EsEp7FBpwIVBOHt/lDkqUtDt+vQkWRPA5cLZ3tEny48g==}
+  astro-vtbot@2.0.3:
+    resolution: {integrity: sha512-wUFR8HWNRQrx6qjLeq3C7h8Rdl4vqB7gKv0pAlFTZbLgC7ath8gxOlGsviyl0vmMLJnu710e0NszsO0vKHzS/g==}
 
   astro@5.0.3:
     resolution: {integrity: sha512-qpeN+POmmfAQu/XDXaI2CxkUgQFwH9uMUVaA1reV9rybzIbOVYc3E3BU5SkiP/W4BMUFPdJtyw6+/n/0AUv6rw==}
@@ -1251,9 +1251,6 @@ packages:
   entities@4.5.0:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
     engines: {node: '>=0.12'}
-
-  eruda@3.4.1:
-    resolution: {integrity: sha512-RmaO5yD97URY/9Q0lye3cmmNPoXNKreeePIw7c/zllbscR92CjGFZFuQ70+0fLIvLcKW3Xha8DS8NFhmeNbEBQ==}
 
   es-module-lexer@1.5.4:
     resolution: {integrity: sha512-MVNK56NiMrOwitFB7cqDwq0CQutbw+0BvLshJSse0MUNU+y1FC3bUS/AQg7oUng+/wKrrki7JfmwtVHkVfPLlw==}
@@ -3549,15 +3546,13 @@ snapshots:
 
   '@vscode/l10n@0.0.18': {}
 
-  '@vtbag/cam-shaft@1.0.1': {}
+  '@vtbag/cam-shaft@1.0.5': {}
 
-  '@vtbag/element-crossing@1.0.4': {}
+  '@vtbag/element-crossing@1.1.0': {}
 
-  '@vtbag/inspection-chamber@1.0.18':
-    dependencies:
-      eruda: 3.4.1
+  '@vtbag/inspection-chamber@1.0.19': {}
 
-  '@vtbag/turn-signal@1.1.0': {}
+  '@vtbag/turn-signal@1.3.0': {}
 
   acorn-jsx@5.3.2(acorn@8.14.0):
     dependencies:
@@ -3614,12 +3609,12 @@ snapshots:
       astro: 5.0.3(jiti@1.21.6)(rollup@4.28.1)(terser@5.37.0)(typescript@5.7.2)(yaml@2.6.1)
       rehype-expressive-code: 0.38.3
 
-  astro-vtbot@1.10.7:
+  astro-vtbot@2.0.3:
     dependencies:
-      '@vtbag/cam-shaft': 1.0.1
-      '@vtbag/element-crossing': 1.0.4
-      '@vtbag/inspection-chamber': 1.0.18
-      '@vtbag/turn-signal': 1.1.0
+      '@vtbag/cam-shaft': 1.0.5
+      '@vtbag/element-crossing': 1.1.0
+      '@vtbag/inspection-chamber': 1.0.19
+      '@vtbag/turn-signal': 1.3.0
 
   astro@5.0.3(jiti@1.21.6)(rollup@4.28.1)(terser@5.37.0)(typescript@5.7.2)(yaml@2.6.1):
     dependencies:
@@ -3926,8 +3921,6 @@ snapshots:
   emoji-regex@9.2.2: {}
 
   entities@4.5.0: {}
-
-  eruda@3.4.1: {}
 
   es-module-lexer@1.5.4: {}
 
