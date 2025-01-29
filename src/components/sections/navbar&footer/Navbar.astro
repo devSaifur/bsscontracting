@@ -3,12 +3,10 @@
 import ThemeIcon from '@components/ThemeIcon.astro'
 import NavLink from '@components/ui/links/NavLink.astro'
 import enStrings from '@utils/navigation.ts'
-import frStrings from '@utils/fr/navigation.ts'
 import { Image } from 'astro:assets'
 
 // Select the correct translation based on the page's lang prop:
-const strings = Astro.currentLocale === 'fr' ? frStrings : enStrings
-const homeUrl = Astro.currentLocale === 'fr' ? '/fr' : '/'
+const strings = enStrings
 ---
 
 <!-- Main header component -->
@@ -24,7 +22,7 @@ const homeUrl = Astro.currentLocale === 'fr' ? '/fr' : '/'
       <!-- Brand logo -->
       <a
         class="flex-none rounded-lg text-xl font-bold outline-none ring-zinc-500 focus-visible:ring dark:ring-zinc-200 dark:focus:outline-none"
-        href={homeUrl}
+        href="/"
         aria-label="Brand"
       >
         <Image
@@ -213,11 +211,4 @@ const homeUrl = Astro.currentLocale === 'fr' ? '/fr' : '/'
       })
     })
   })
-</script>
-<!--Import the necessary Collapse and Overlay plugins-->
-<!--https://preline.co/plugins/html/collapse.html-->
-<!--https://preline.co/plugins/html/overlay.html-->
-<script>
-  import '@preline/collapse/index.js'
-  import '@preline/overlay/index.js'
 </script>

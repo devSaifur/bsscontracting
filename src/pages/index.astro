@@ -7,7 +7,6 @@ import FeaturesGeneral from '@components/sections/features/FeaturesGeneral.astro
 import FeaturesNavs from '@components/sections/features/FeaturesNavs.astro'
 import TestimonialsSection from '@components/sections/testimonials/TestimonialsSection.astro'
 import FAQ from '@components/sections/misc/FAQ.astro'
-import AnnouncementBanner from '@components/ui/banners/AnnouncementBanner.astro'
 import heroImage from '@images/hero-image.webp'
 import faqs from '@data/faqs.json'
 import features from '@data/features.json'
@@ -15,6 +14,11 @@ import featureImage from '@images/features-image.avif'
 import construction from '@images/construction-image.avif'
 import tools from '@images/automated-tools.avif'
 import dashboard from '@images/dashboard-image.avif'
+
+import LeftSection from '@components/ui/blocks/LeftSection.astro'
+import RightSection from '@components/ui/blocks/RightSection.astro'
+
+import { articles } from '@/data_files/services'
 
 const avatarSrcs: Array<string> = [
   'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80',
@@ -25,12 +29,6 @@ const avatarSrcs: Array<string> = [
 ---
 
 <MainLayout>
-  <AnnouncementBanner
-    btnId="dismiss-button"
-    btnTitle="Explore ScrewFast on GitHub"
-    url="https://github.com/devSaifur/bsscontracting"
-  />
-
   <HeroSection
     title=`Maintain your property with <span
         class="text-yellow-500 dark:text-yellow-400">BSS Contracting Management</span>`
@@ -56,7 +54,36 @@ const avatarSrcs: Array<string> = [
     features={features}
   />
 
-  <FeaturesNavs
+  {
+    articles.map((article) => {
+      return article.isRightSection ? (
+        <RightSection
+          title={article.title}
+          subTitle={article.subTitle}
+          single={article.single}
+          imgOne={article.imgOne}
+          imgOneAlt={article.imgOneAlt}
+          imgTwo={article.imgTwo}
+          imgTwoAlt={article.imgTwoAlt}
+          btnExists={article.btnExists}
+          btnTitle={article.btnTitle}
+          btnURL={article.btnURL}
+        />
+      ) : (
+        <LeftSection
+          title={article.title}
+          subTitle={article.subTitle}
+          img={article.img}
+          imgAlt={article.imgAlt}
+          btnExists={article.btnExists}
+          btnTitle={article.btnTitle}
+          btnURL={article.btnURL}
+        />
+      )
+    })
+  }
+
+  <!-- <FeaturesNavs
     title=`Customize <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>'s offerings to perfectly suit your hardware and construction needs.`
     tabs={[
       {
@@ -86,12 +113,11 @@ const avatarSrcs: Array<string> = [
         alt: 'Gray metal building frame near tower crane during daytime'
       }
     ]}
-  />
+  /> -->
 
   <TestimonialsSection
     title="Fast-Track Your Projects"
     subTitle="At ScrewFast, we ensure a swift start with instant account setup. Experience the speed of construction redefined."
-    ;
     testimonials={[
       {
         content:

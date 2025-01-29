@@ -19,7 +19,10 @@
     "astrojs",
     "bsscontracting",
     "gsap",
+    "popovertarget",
+    "popovertargetaction",
     "preline",
+    "valibot",
     "vtbot"
-  ],
+  ]
 }
