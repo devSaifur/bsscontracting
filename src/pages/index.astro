@@ -8,13 +8,13 @@ import TestimonialsSection from '@components/sections/testimonials/TestimonialsS
 import FAQ from '@components/sections/misc/FAQ.astro'
 import heroImage from '@images/hero-image.webp'
 import faqs from '@data/faqs.json'
-import features from '@data/features.json'
 import featureImage from '@images/features-image.webp'
 
 import LeftSection from '@components/ui/blocks/LeftSection.astro'
 import RightSection from '@components/ui/blocks/RightSection.astro'
 
 import { articles } from '@/data_files/services'
+import ContactForm from '@/components/sections/misc/ContactForm.astro'
 ---
 
 <MainLayout>
@@ -23,7 +23,7 @@ import { articles } from '@/data_files/services'
         class="text-yellow-500 dark:text-yellow-400">BSS Contracting Management</span>`
     subTitle="We offer top-tier maintenance to your property with quality customer support. Trusted by many."
     primaryBtn="Start Exploring"
-    primaryBtnURL="/services"
+    primaryBtnURL="/contact"
     secondaryBtn="Contact Us"
     secondaryBtnURL="/contact"
     src={heroImage}
@@ -60,54 +60,19 @@ import { articles } from '@/data_files/services'
   }
 
   <FeaturesGeneral
-    title="Meeting Industry Demands"
-    subTitle="At ScrewFast, we tackle the unique challenges encountered in the hardware and construction sectors. From cutting-edge tools to expert services, we're dedicated to helping you overcome obstacles and achieve your goals."
     src={featureImage}
-    alt="ScrewFast products in floating boxes"
-    features={features}
+    alt="Worker working on construction site"
   />
-
-  <!-- <FeaturesNavs
-    title=`Customize <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>'s offerings to perfectly suit your hardware and construction needs.`
-    tabs={[
-      {
-        heading: 'Cutting-Edge Tools',
-        content:
-          "Empower your projects with ScrewFast's cutting-edge tools. Experience enhanced efficiency in construction management with our sophisticated automated solutions.",
-        svg: 'tools',
-        src: tools,
-        alt: 'Yellow and black heavy equipment on brown grass field',
-        first: true
-      },
-      {
-        heading: 'Intuitive Dashboards',
-        content:
-          "Navigate with ease using ScrewFast's intuitive dashboards. Set up and oversee your projects seamlessly, with user-friendly interfaces designed for quick and effective workflow management.",
-        svg: 'dashboard',
-        src: dashboard,
-        alt: 'A screenshot or graphic representation of the intuitive dashboard',
-        second: true
-      },
-      {
-        heading: 'Robust Features',
-        content:
-          "Minimize complexity, maximize productivity. ScrewFast's robust features are engineered to streamline your construction process, delivering results that stand out for their excellence.",
-        svg: 'house',
-        src: construction,
-        alt: 'Gray metal building frame near tower crane during daytime'
-      }
-    ]}
-  /> -->
 
   <TestimonialsSection
     title="Fast-Track Your Projects"
-    subTitle="At ScrewFast, we ensure a swift start with instant account setup. Experience the speed of construction redefined."
+    subTitle="At Bss Contracting, we're proud to have helped countless clients achieve their goals. Here's what they have to say about our services."
     testimonials={[
       {
         content:
-          'ScrewFast dramatically boosted our project efficiency. Setup was instant, and their rapid response times are phenomenal. Truly a game-changer in hardware and construction support!',
+          'Bss Contracting has been an invaluable partner in our construction projects. Their tools and services have helped us save time and money, and their customer support is second to none.',
         author: 'Samantha Ruiz',
-        role: 'Chief Operating Officer | ConstructIt Inc.',
+        role: 'Project Manager',
         avatarSrc:
           'https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80'
       }
@@ -115,12 +80,12 @@ import { articles } from '@/data_files/services'
     statistics={[
       {
         count: '70k+',
-        description: 'customers equipped — from DIY to major construction firms'
+        description: 'customers equipped — from DIY to major construction sites'
       },
       {
         count: '35%',
         description:
-          'uptick in project efficiency with ScrewFast tools and services'
+          'uptick in project efficiency with Bss Contracting tools and services'
       },
       {
         count: '15.3%',
@@ -137,8 +102,11 @@ import { articles } from '@/data_files/services'
   <FAQ title="Frequently<br />asked questions" faqs={faqs} />
 
   <HeroSectionAlt
-    title="Let's Build Together"
-    subTitle="ScrewFast is an open-source template, meticulously crafted with Astro, Tailwind CSS, and Preline UI frameworks."
-    url="https://github.com/mearashadowfax/ScrewFast"
+    title="Let's Build Together with BSS Contracting"
+    subTitle="We're here to help you with all your property maintenance needs. Reach out to us today and let's get started!"
   />
+
+  <div class="mx-auto max-w-xl lg:max-w-3xl">
+    <ContactForm />
+  </div>
 </MainLayout>

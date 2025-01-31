@@ -1,40 +1,40 @@
 ---
-import Icon from "@components/ui/icons/Icon.astro";
+import Icon from '@components/ui/icons/Icon.astro'
 // Destructure the properties from Astro.props
 const {
   pageTitle,
-  title = Astro.currentLocale === "fr" ? "Partager" : "Share",
-} = Astro.props;
+  title = Astro.currentLocale === 'fr' ? 'Partager' : 'Share'
+} = Astro.props
 
 // Define TypeScript interface for the properties
 interface Props {
-  pageTitle: string;
-  title?: string;
+  pageTitle: string
+  title?: string
 }
 
 type SocialPlatform = {
-  name: string;
-  url: string;
-  svg: string;
-};
+  name: string
+  url: string
+  svg: string
+}
 
 const socialPlatforms: SocialPlatform[] = [
   {
-    name: "Facebook",
+    name: 'Facebook',
     url: `https://www.facebook.com/share.php?u=${Astro.url}&title=${pageTitle}`,
-    svg: "facebook",
+    svg: 'facebook'
   },
   {
-    name: "X",
+    name: 'X',
     url: `https://twitter.com/home/?status=${pageTitle}${Astro.url}`,
-    svg: "x",
+    svg: 'x'
   },
   {
-    name: "LinkedIn",
+    name: 'LinkedIn',
     url: `https://www.linkedin.com/shareArticle?mini=true&url=${Astro.url}&title=${pageTitle}`,
-    svg: "linkedIn",
-  },
-];
+    svg: 'linkedIn'
+  }
+]
 ---
 
 <div
@@ -58,7 +58,7 @@ const socialPlatforms: SocialPlatform[] = [
       {
         socialPlatforms.map((platform) => (
           <a
-            class="flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-neutral-700 hover:bg-neutral-200 focus:bg-neutral-100  focus:outline-none dark:text-neutral-300 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700 "
+            class="flex items-center gap-x-3.5 rounded-lg px-3 py-2 text-sm text-neutral-700 hover:bg-neutral-200 focus:bg-neutral-100 focus:outline-none dark:text-neutral-300 dark:hover:bg-neutral-700 dark:hover:text-neutral-300 dark:focus:bg-neutral-700"
             href={platform.url}
           >
             <Icon name={platform.svg} />
@@ -113,60 +113,59 @@ const socialPlatforms: SocialPlatform[] = [
 <!--https://preline.co/plugins/html/dropdown.html-->
 <!-- https://clipboardjs.com/ -->
 <script>
-  import "@preline/dropdown/index.js";
+  import '@preline/dropdown/index.js'
 </script>
 
 <script>
-  import ClipboardJS from "clipboard";
+  import ClipboardJS from 'clipboard'
 
   // Initialization of Clipboard
-  (function () {
-    window.addEventListener("load", () => {
-      const clipboards =
-        document.querySelectorAll<HTMLElement>(".js-clipboard");
+  ;(function () {
+    window.addEventListener('load', () => {
+      const clipboards = document.querySelectorAll<HTMLElement>('.js-clipboard')
 
       clipboards.forEach((el) => {
         const clipboard = new ClipboardJS(el, {
           text: () => {
-            return window.location.href;
-          },
-        });
+            return window.location.href
+          }
+        })
 
-        clipboard.on("success", () => {
+        clipboard.on('success', () => {
           const defaultElement = el.querySelector<HTMLElement>(
-            ".js-clipboard-default"
-          );
+            '.js-clipboard-default'
+          )
           const successElement = el.querySelector<HTMLElement>(
-            ".js-clipboard-success"
-          );
+            '.js-clipboard-success'
+          )
           const successTextElement = el.querySelector<HTMLElement>(
-            ".js-clipboard-success-text"
-          );
-          const successText = el.dataset.clipboardSuccessText || "";
-          let oldSuccessText: string | undefined;
+            '.js-clipboard-success-text'
+          )
+          const successText = el.dataset.clipboardSuccessText || ''
+          let oldSuccessText: string | undefined
 
           if (successTextElement) {
-            oldSuccessText = successTextElement.textContent || "";
-            successTextElement.textContent = successText;
+            oldSuccessText = successTextElement.textContent || ''
+            successTextElement.textContent = successText
           }
 
           if (defaultElement && successElement) {
-            defaultElement.style.display = "none";
-            successElement.style.display = "block";
+            defaultElement.style.display = 'none'
+            successElement.style.display = 'block'
           }
 
           setTimeout(() => {
             if (successTextElement && oldSuccessText !== undefined) {
-              successTextElement.textContent = oldSuccessText;
+              successTextElement.textContent = oldSuccessText
             }
 
             if (defaultElement && successElement) {
-              successElement.style.display = "";
-              defaultElement.style.display = "";
+              successElement.style.display = ''
+              defaultElement.style.display = ''
             }
-          }, 800);
-        });
-      });
-    });
-  })();
+          }, 800)
+        })
+      })
+    })
+  })()
 </script>

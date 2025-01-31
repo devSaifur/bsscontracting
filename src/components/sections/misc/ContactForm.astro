@@ -1,0 +1,67 @@
+---
+// Import the necessary dependencies.
+import AuthBtn from '@components/ui/buttons/AuthBtn.astro'
+import TextInput from '@components/ui/forms/input/TextInput.astro'
+import EmailContactInput from '@components/ui/forms/input/EmailContactInput.astro'
+import PhoneInput from '@components/ui/forms/input/PhoneInput.astro'
+import TextAreaInput from '@components/ui/forms/input/TextAreaInput.astro'
+
+const formSubTitle: string = "We'll get back to you in 1-2 business days."
+---
+
+<form id="contactForm" action="/api/contact" method="POST">
+  <div class="grid gap-4">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <TextInput
+        id="hs-firstname-contacts"
+        label="First Name"
+        name="firstName"
+      />
+      <TextInput id="hs-lastname-contacts" label="Last Name" name="lastName" />
+    </div>
+    <EmailContactInput id="hs-email-contacts" />
+    <PhoneInput id="hs-phone-number" />
+    <TextAreaInput id="hs-about-contacts" label="Details" name="message" />
+  </div>
+
+  <div class="mt-4 grid">
+    <AuthBtn title="Send Message" />
+  </div>
+
+  <div class="mt-3 text-center">
+    <p class="text-sm text-neutral-600 dark:text-neutral-400">
+      {formSubTitle}
+    </p>
+  </div>
+</form>
+
+<script>
+  const form = document.getElementById('contactForm') as HTMLFormElement
+  const submitBtn = form.querySelector(
+    'button[type="submit"]'
+  ) as HTMLButtonElement
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault()
+    const formData = new FormData(form)
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        body: formData
+      })
+
+      submitBtn.disabled = true
+
+      if (!response.ok) throw new Error()
+
+      alert('Message sent successfully')
+
+      submitBtn.disabled = false
+      // Clear form on success
+      form.reset()
+    } catch (error) {
+      console.error('Failed to send message')
+    }
+  })
+</script>
