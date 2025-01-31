@@ -9,7 +9,7 @@ interface DiscordMessage {
 }
 
 const webhook = new WebhookClient({
-  url: 'https://discord.com/api/webhooks/1334259177945825310/zV4Y9bzjh1qo_IzDLnWk2S6HUm_uSGImFziGp1TJXQ9n29h3fsrkkNQrrFBWzxSZFGc0'
+  url: process.env.DISCORD_WEBHOOK_URL!
 })
 
 export const sendDiscordMessage = async (message: DiscordMessage) => {

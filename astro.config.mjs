@@ -3,12 +3,17 @@ import tailwind from '@astrojs/tailwind'
 import sitemap from '@astrojs/sitemap'
 import compressor from 'astro-compressor'
 
+import netlify from '@astrojs/netlify'
+
 export default defineConfig({
-  site: 'https://screwfast.uk',
+  site: 'https://bsscontracting.us',
+
   image: {
     domains: ['images.unsplash.com']
   },
+
   prefetch: true,
+
   integrations: [
     tailwind(),
     sitemap(),
@@ -17,7 +22,11 @@ export default defineConfig({
       brotli: true
     })
   ],
+
   experimental: {
     svg: true
-  }
+  },
+
+  output: 'server',
+  adapter: netlify()
 })

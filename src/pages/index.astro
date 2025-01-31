@@ -15,6 +15,10 @@ import RightSection from '@components/ui/blocks/RightSection.astro'
 
 import { articles } from '@/data_files/services'
 import ContactForm from '@/components/sections/misc/ContactForm.astro'
+
+const title: string = 'Contact us'
+const subTitle: string =
+  "Have questions or want to discuss a project? Reach out, and let's craft the perfect solution with our tools and services."
 ---
 
 <MainLayout>
@@ -23,7 +27,7 @@ import ContactForm from '@/components/sections/misc/ContactForm.astro'
         class="text-yellow-500 dark:text-yellow-400">BSS Contracting Management</span>`
     subTitle="We offer top-tier maintenance to your property with quality customer support. Trusted by many."
     primaryBtn="Start Exploring"
-    primaryBtnURL="/contact"
+    primaryBtnURL="/services"
     secondaryBtn="Contact Us"
     secondaryBtnURL="/contact"
     src={heroImage}
@@ -101,12 +105,23 @@ import ContactForm from '@/components/sections/misc/ContactForm.astro'
 
   <FAQ title="Frequently<br />asked questions" faqs={faqs} />
 
+  <div class="mx-auto max-w-xl space-y-6 pb-14 md:space-y-10 lg:max-w-2xl">
+    <div class="text-center">
+      <h1
+        class="text-balance text-2xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight"
+      >
+        {title}
+      </h1>
+      <p class="mt-1 text-pretty text-neutral-600 dark:text-neutral-400">
+        {subTitle}
+      </p>
+    </div>
+
+    <ContactForm />
+  </div>
+
   <HeroSectionAlt
     title="Let's Build Together with BSS Contracting"
     subTitle="We're here to help you with all your property maintenance needs. Reach out to us today and let's get started!"
   />
-
-  <div class="mx-auto max-w-xl lg:max-w-3xl">
-    <ContactForm />
-  </div>
 </MainLayout>

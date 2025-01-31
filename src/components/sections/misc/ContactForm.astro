@@ -1,5 +1,4 @@
 ---
-// Import the necessary dependencies.
 import AuthBtn from '@components/ui/buttons/AuthBtn.astro'
 import TextInput from '@components/ui/forms/input/TextInput.astro'
 import EmailContactInput from '@components/ui/forms/input/EmailContactInput.astro'
@@ -10,7 +9,7 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days."
 ---
 
 <form id="contactForm" action="/api/contact" method="POST">
-  <div class="grid gap-4">
+  <div class="grid gap-4 md:gap-5">
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
       <TextInput
         id="hs-firstname-contacts"
@@ -36,6 +35,9 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days."
 </form>
 
 <script>
+  import Toastify from 'toastify-js'
+  import 'toastify-js/src/toastify.css'
+
   const form = document.getElementById('contactForm') as HTMLFormElement
   const submitBtn = form.querySelector(
     'button[type="submit"]'
@@ -55,9 +57,17 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days."
 
       if (!response.ok) throw new Error()
 
-      alert('Message sent successfully')
-
       submitBtn.disabled = false
+
+      Toastify({
+        text: 'Message sent successfully',
+        duration: 5000,
+        close: true,
+        gravity: 'top',
+        position: 'center',
+        backgroundColor: '#fb713b'
+      }).showToast()
+
       // Clear form on success
       form.reset()
     } catch (error) {
