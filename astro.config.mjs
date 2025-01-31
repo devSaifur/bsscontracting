@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind'
 import sitemap from '@astrojs/sitemap'
 import compressor from 'astro-compressor'
 
-import netlify from '@astrojs/netlify'
+import vercel from '@astrojs/vercel'
 
 export default defineConfig({
   site: 'https://bsscontracting.us',
@@ -28,5 +28,5 @@ export default defineConfig({
   },
 
   output: 'server',
-  adapter: netlify()
+  adapter: vercel()
 })

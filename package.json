@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/netlify": "^6.1.0",
     "@astrojs/sitemap": "^3.2.1",
     "@astrojs/tailwind": "^5.1.5",
+    "@astrojs/vercel": "^8.0.5",
     "@preline/accordion": "^2.6.0",
     "astro": "^5.2.3",
     "astro-compressor": "^1.0.0",
