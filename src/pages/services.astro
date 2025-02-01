@@ -9,22 +9,6 @@ import FeaturesStats from '@components/sections/features/FeaturesStats.astro'
 import { articles } from '@/data_files/services'
 import { SITE } from '@data/constants'
 
-interface Article {
-  isRightSection: boolean
-  title: string
-  subTitle: string
-  btnExists?: boolean
-  btnTitle?: string
-  btnURL?: string
-  single?: boolean
-  img?: any
-  imgAlt?: string
-  imgOne?: any
-  imgOneAlt?: string
-  imgTwo?: any
-  imgTwoAlt?: string
-}
-
 const pageTitle: string = `Services | ${SITE.title}`
 ---
 
@@ -53,7 +37,7 @@ const pageTitle: string = `Services | ${SITE.title}`
     title="Expert Property Management Services"
     subTitle="At BSS Contracting, we offer top-tier property management services to maintain your property with quality customer support. Trusted by many. Start exploring and contact our team for superior quality and reliability."
     btnExists={true}
-    btnTitle="Schedule a Consultation"
+    btnTitle="Become a vendor"
     btnURL="/contact"
   />
   <!-- RightSection and LeftSection contain details about various services along with pertinent imagery.
@@ -104,8 +88,8 @@ const pageTitle: string = `Services | ${SITE.title}`
         description: 'project completion rate'
       },
       {
-        stat: '5,000+',
-        description: 'happy clients'
+        stat: '20+',
+        description: 'Maintenance / Preservation Clients'
       },
       {
         stat: '85%',

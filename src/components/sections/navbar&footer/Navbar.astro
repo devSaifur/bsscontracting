@@ -4,6 +4,8 @@ import ThemeIcon from '@components/ThemeIcon.astro'
 import NavLink from '@components/ui/links/NavLink.astro'
 import enStrings from '@utils/navigation.ts'
 import { Image } from 'astro:assets'
+import logoDark from '@images/logo_dark.webp'
+import logo from '@images/logo.webp'
 
 // Select the correct translation based on the page's lang prop:
 const strings = enStrings
@@ -26,7 +28,7 @@ const strings = enStrings
         aria-label="Brand"
       >
         <Image
-          src={`/logo_dark.webp`}
+          src={logoDark}
           class="hidden h-14 w-28 dark:block md:h-20 md:w-36"
           alt="Logo"
           width={140}
@@ -34,7 +36,7 @@ const strings = enStrings
           format="avif"
         />
         <Image
-          src={`/logo.webp`}
+          src={logo}
           class="dark:hidden"
           alt="Logo"
           width={140}

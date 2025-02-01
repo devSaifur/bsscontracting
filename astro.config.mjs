@@ -28,5 +28,10 @@ export default defineConfig({
   },
 
   output: 'server',
-  adapter: vercel()
+  adapter: vercel({
+    imageService: true,
+    imagesConfig: {
+      sizes: [320, 640, 1280]
+    }
+  })
 })
