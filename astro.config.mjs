@@ -7,13 +7,7 @@ import vercel from '@astrojs/vercel'
 
 export default defineConfig({
   site: 'https://bsscontracting.us',
-
-  image: {
-    domains: ['images.unsplash.com']
-  },
-
   prefetch: true,
-
   integrations: [
     tailwind(),
     sitemap(),
@@ -22,16 +16,17 @@ export default defineConfig({
       brotli: true
     })
   ],
-
   experimental: {
     svg: true
   },
-
   output: 'server',
   adapter: vercel({
     imageService: true,
     imagesConfig: {
-      sizes: [320, 640, 1280]
-    }
+      sizes: [320, 640, 1280],
+      formats: ['image/webp', 'image/avif'],
+      domains: []
+    },
+    devImageService: 'sharp'
   })
 })
