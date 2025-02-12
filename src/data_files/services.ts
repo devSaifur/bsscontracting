@@ -15,7 +15,7 @@ import roofing from '@images/roofing-1.webp'
 import electrical from '@images/electrical-1.webp'
 import appliances from '@images/appliances-1.webp'
 import appliances2 from '@images/appliances-2.webp'
-import siding from '@images/siding-3.webp'
+import siding from '@images/siding-1.webp'
 import drywall from '@images/drywall.webp'
 
 interface Article {
