@@ -25,5 +25,6 @@
     "toastify",
     "valibot",
     "vtbot"
-  ]
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

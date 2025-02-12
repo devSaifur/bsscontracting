@@ -8,6 +8,15 @@ import lawnCare2 from '@images/lawn-care-2.webp'
 import interiorDesign from '@images/interior-design.webp'
 import fixSupport from '@images/fix-support-1.webp'
 import fixSupport2 from '@images/fix-support-2.webp'
+import plumbing2 from '@images/plumbing-2.webp'
+import hvac from '@images/hvac-1.webp'
+import hvac2 from '@images/hvac-2.webp'
+import roofing from '@images/roofing-1.webp'
+import electrical from '@images/electrical-1.webp'
+import appliances from '@images/appliances-1.webp'
+import appliances2 from '@images/appliances-2.webp'
+import siding from '@images/siding-3.webp'
+import drywall from '@images/drywall.webp'
 
 interface Article {
   isRightSection: boolean
@@ -26,6 +35,14 @@ interface Article {
 }
 
 export const articles: Article[] = [
+  {
+    isRightSection: false,
+    title: 'Top-Tier plumbing services',
+    subTitle:
+      'BSS Contracting offers top-tier plumbing services to maintain your property with quality customer support. Our team is dedicated to providing exceptional service and ensuring your plumbing needs are met. Trust BSS Contracting for reliable plumbing solutions.',
+    img: plumbing2,
+    imgAlt: 'Plumbing services by BSS Contracting'
+  },
   {
     isRightSection: true,
     title: 'Tree Services by Trusted Arborist',
@@ -80,5 +97,67 @@ export const articles: Article[] = [
     btnExists: true,
     btnTitle: 'Learn More',
     btnURL: '/contact'
+  },
+  {
+    isRightSection: false,
+    title: 'Roofing Services',
+    subTitle:
+      'BSS Contracting offers top-tier roofing services that are designed to protect your property from the elements. Our team of certified roofers and installers provides efficient and cost-effective solutions to keep your roof looking its best.',
+    img: roofing,
+    imgAlt: 'Roofing services by BSS Contracting',
+    single: true,
+    imgOne: roofing,
+    imgOneAlt: 'Roofing services by BSS Contracting'
+  },
+  {
+    isRightSection: true,
+    title: 'HVAC Services',
+    subTitle:
+      'We offer Heating, Ventilation, and Air Conditioning (HVAC) services to keep your home or business comfortable and energy-efficient. Our experienced technicians install and maintain HVAC systems, ensuring a comfortable and healthy environment for your occupants.',
+    img: hvac,
+    imgAlt: 'HVAC services by BSS Contracting',
+    single: false,
+    imgOne: hvac,
+    imgOneAlt: 'HVAC services by BSS Contracting',
+    imgTwo: hvac2,
+    imgTwoAlt: 'Person working on HVAC system'
+  },
+  {
+    isRightSection: false,
+    title: 'Electrical Services',
+    subTitle:
+      'Out top grade electrical expertise are ready to serve you with all your needs. We have a team of experienced electricians who are ready to provide you with the best services for your electrical needs.',
+    img: electrical,
+    imgAlt: 'Electrical services by BSS Contracting'
+  },
+  {
+    isRightSection: true,
+    title: 'Appliances Services',
+    subTitle:
+      'BSS Contracting offers top-tier appliances services, Our team of experts are ready to provide you with the best services for your appliances needs, from installation to repair.',
+    img: appliances,
+    imgAlt: 'Appliances services by BSS Contracting',
+    single: false,
+    imgOne: appliances,
+    imgOneAlt: 'Appliances services by BSS Contracting',
+    imgTwo: appliances2,
+    imgTwoAlt: 'Person working on appliances'
+  },
+  {
+    isRightSection: false,
+    title: 'Siding Services',
+    subTitle:
+      'BSS Contracting offers top-tier siding services, Our team of experts are ready to provide you with the best services for your siding needs, from installation to repair.',
+    img: siding,
+    imgAlt: 'Siding by BSS Contracting'
+  },
+  {
+    isRightSection: true,
+    title: 'Drywall Services',
+    subTitle:
+      'BSS Contracting offers top-tier drywall services, Our team of experts are ready to provide you with the best services for your drywall needs, from installation to repair.',
+    imgOne: drywall,
+    imgOneAlt: 'Drywall by BSS Contracting',
+    single: true
   }
 ]

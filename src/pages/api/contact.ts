@@ -31,6 +31,7 @@ export const POST: APIRoute = async ({ request }) => {
     await sendDiscordMessage(validData)
     return new Response(JSON.stringify({ success: true }), { status: 200 })
   } catch (err) {
+    console.error(err)
     return new Response(JSON.stringify({ success: false }), { status: 500 })
   }
 }
