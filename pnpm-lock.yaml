@@ -64,8 +64,8 @@ importers:
         specifier: ^1.12.3
         version: 1.12.3
       astro-vtbot:
-        specifier: ^1.10.7
-        version: 1.10.7
+        specifier: ^2.0.5
+        version: 2.0.5
       prettier:
         specifier: ^3.5.0
         version: 3.5.0
@@ -852,8 +852,8 @@ packages:
   astro-compressor@1.0.0:
     resolution: {integrity: sha512-MNGRmjIsb73BIJivbU/HnTbPu5CEFvXp1NCev0bpsuK/cp4cCPX6C1omUPXzw2oQbtKv0phTTTtEk+h20SrF1Q==}
 
-  astro-vtbot@1.10.7:
-    resolution: {integrity: sha512-lwCMq+ruuTbHooJ/ZYL2tA99KXDXqbmD5JNBtlnuO7EsEp7FBpwIVBOHt/lDkqUtDt+vQkWRPA5cLZ3tEny48g==}
+  astro-vtbot@2.0.5:
+    resolution: {integrity: sha512-twkpuPz7L+WFBwnThFjYXVh8U/EqCU5d+zEFl+TyO5+eagR88fCTsdYv0lwGiuz3lqKD2drSuA5K0ziUucTt4g==}
 
   astro@5.2.6:
     resolution: {integrity: sha512-CrTuJMwpWF9kmOhX+cl6uPqNbTRrHO7eXggFP9SK7+Bsen/7FpJtA6k1p/ALleuV5ndJLqn/9tpmP3qACHPjYA==}
@@ -3312,7 +3312,7 @@ snapshots:
 
   astro-compressor@1.0.0: {}
 
-  astro-vtbot@1.10.7:
+  astro-vtbot@2.0.5:
     dependencies:
       '@vtbag/cam-shaft': 1.0.5
       '@vtbag/element-crossing': 1.1.0
