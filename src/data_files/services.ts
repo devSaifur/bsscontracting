@@ -58,7 +58,7 @@ export const articles: Article[] = [
     isRightSection: false,
     title: 'Transforming Designs into Reality',
     subTitle:
-      'Our skilled craftsmen bring precision and excellence to every construction project. From minor installations to substantial structural work, ScrewFast offers reliable construction services to turn your plans into tangible outcomes. We ensure the highest standards of safety and workmanship, utilizing top-quality tools and materials from our extensive inventory.',
+      'Our skilled craftsmen bring precision and excellence to every construction project. From minor installations to substantial structural work, BSS contracting offers reliable construction services to turn your plans into tangible outcomes. We ensure the highest standards of safety and workmanship, utilizing top-quality tools and materials from our extensive inventory.',
     img: beforeAfter,
     imgAlt: 'Construction site before and after',
     btnExists: true,

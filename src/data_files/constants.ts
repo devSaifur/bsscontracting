@@ -1,4 +1,4 @@
-import ogImageSrc from '@images/social.png'
+import ogImageSrc from '@images/og.png'
 
 export const SITE = {
   title: 'BSS Contracting',
@@ -37,6 +37,6 @@ export const OG = {
   url: SITE.url,
   title: `${SITE.title}: : Property management services`,
   description:
-    'Maintain your property with BSS Contracting top-quality hardware tools and expert construction services. Trusted by industry leaders, ScrewFast offers simplicity, affordability, and reliability. Experience the difference with user-centric design and cutting-edge tools. Start exploring now!',
+    'Maintain your property with BSS Contracting top-tier maintenance to your property with quality customer support. Trusted by many',
   image: ogImageSrc
 }
